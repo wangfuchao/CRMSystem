@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRMSystemApp.Contract.AddProjectPage"
+             xmlns:local="clr-namespace:CRMSystemApp.Contract"
+             xmlns:controls="clr-namespace:CRMSystemApp.Business.InfoClass"
+             Title="新建工程清单">
+    <ListView x:Name="listView"  HasUnevenRows="True" IsPullToRefreshEnabled="True" IsGroupingEnabled="True" GroupDisplayBinding="{Binding Key}"  Refreshing="Handle_Refreshing" ItemTapped="Handle_ItemTapped" SeparatorColor="AliceBlue">
+        <ListView.GroupHeaderTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Label Text="{Binding Key}" FontSize="20"></Label>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.GroupHeaderTemplate>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <controls:StateCell
+                    Name="{Binding Name}"
+                    Phone="{Binding Phone}"
+                    State="{Binding State}"
+                    Photo="{Binding Photo}"/>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

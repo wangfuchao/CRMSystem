@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRMSystemApp.NewsCell">
+    <ViewCell.View>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Start">
+            <Image x:Name="imgPhoto" Source="Inform.png" HeightRequest="50" WidthRequest="70"/>
+            <StackLayout Orientation="Vertical">
+                <Label x:Name="lblHead" Text="重要会议" FontSize="18"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                    <Label x:Name="lblTheme" Text="会议"/>
+                    <Label x:Name="lblDate" Text="2018/04/09"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ViewCell.View>
+</ViewCell>

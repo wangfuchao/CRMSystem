@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRMSystemApp.MainTabPage"
+             Title="业务主页">
+    <Grid ColumnSpacing="0" RowSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="1"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <ScrollView x:Name="cvContenPlaceHolder" Grid.Row="0"/>
+        <BoxView BackgroundColor="AliceBlue" Grid.Row="1"/>
+        <!--tabs bar-->
+        <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!--Tabb item-->
+            <StackLayout x:Name="StackLayout0"  BackgroundColor="White" Spacing="0" Grid.Column="0">
+                <Image HeightRequest="30" Source="index.png" HorizontalOptions="Center"/>
+                <Label Text="业务主页" FontSize="12" HorizontalOptions="Center"/>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Function1_Tapped" NumberOfTapsRequired="1"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+            <StackLayout x:Name="StackLayout1" BackgroundColor="White"  Spacing="0" Grid.Column="1">
+                <Image HeightRequest="30" Source="Data.png" HorizontalOptions="Center"/>
+                <Label Text="数据统计" FontSize="12" HorizontalOptions="Center"/>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Function2_Tapped" NumberOfTapsRequired="1"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+            <StackLayout x:Name="StackLayout2" BackgroundColor="White" Spacing="0" Grid.Column="2">
+                <Image HeightRequest="30" Source="calendar.png" HorizontalOptions="Center"/>
+                <Label Text="我的日程" FontSize="12" HorizontalOptions="Center"/>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="MyCalendar_Tapped" NumberOfTapsRequired="1"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+        </Grid>
+
+    </Grid>
+</ContentPage>

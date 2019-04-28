@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRMSystemApp.Business.InfoClass.StateCell">
+  <ViewCell.View>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Start">
+            <Image x:Name="imgPhoto" Source="Customer.png" HeightRequest="50" WidthRequest="70"/>
+            <StackLayout Orientation="Vertical">
+                <Label x:Name="lblName" Text="高拉特" FontSize="18"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                    <Label x:Name="lblPhone" Text="12323232"/>
+                    <Label x:Name="lblState" Text="跟踪状态"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ViewCell.View>
+</ViewCell>

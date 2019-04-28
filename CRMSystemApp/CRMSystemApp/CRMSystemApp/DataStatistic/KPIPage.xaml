@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             x:Class="CRMSystemApp.DataStatistic.KPIPage"
+             xmlns:local="clr-namespace:CRMSystemApp.DataStatistic">
+    <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+        <chart:SfChart.BindingContext>
+            <local:ViewModelKPI/>
+        </chart:SfChart.BindingContext>
+
+        <chart:SfChart.Title>
+            <chart:ChartTitle Text="KPI图"/>
+        </chart:SfChart.Title>
+
+        <chart:SfChart.Legend>
+            <chart:ChartLegend/>
+        </chart:SfChart.Legend>
+
+        <chart:SfChart.PrimaryAxis>
+            <chart:CategoryAxis>
+                <chart:CategoryAxis.Title>
+                    <chart:ChartAxisTitle Text="类别"></chart:ChartAxisTitle>
+                </chart:CategoryAxis.Title>
+            </chart:CategoryAxis>
+        </chart:SfChart.PrimaryAxis>
+
+        <chart:SfChart.SecondaryAxis>
+            <chart:NumericalAxis>
+                <chart:NumericalAxis.Title>
+                    <chart:ChartAxisTitle Text="数量"></chart:ChartAxisTitle>
+                </chart:NumericalAxis.Title>
+            </chart:NumericalAxis>
+        </chart:SfChart.SecondaryAxis>
+
+        <chart:SfChart.Series>
+            <chart:ColumnSeries ItemsSource ="{Binding Data }" XBindingPath="KPIName" YBindingPath="KPINumber" Label="本月状态" Color="LightGreen">
+                <chart:ColumnSeries.DataMarker>
+                    <chart:ChartDataMarker/>
+                </chart:ColumnSeries.DataMarker>
+            </chart:ColumnSeries>
+            <chart:ColumnSeries ItemsSource ="{Binding Data1 }" XBindingPath="KPIName" YBindingPath="KPINumber" Label="本月指标" Color="LightBlue">
+                <chart:ColumnSeries.DataMarker>
+                    <chart:ChartDataMarker/>
+                </chart:ColumnSeries.DataMarker>
+            </chart:ColumnSeries>
+        </chart:SfChart.Series>
+
+    </chart:SfChart>
+</ContentPage>

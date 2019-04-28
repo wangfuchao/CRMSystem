@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRMSystemApp.AddPage"
+             Title="新建业务">
+    <ContentPage.Content>
+        <!--<StackLayout>
+            <TableView Intent="Data">
+                <TableView.Root>
+                    <TableSection Title="新建客户信息">
+                        <EntryCell Label="客户姓名"  HorizontalTextAlignment="Center" />
+                        <EntryCell Label="联系电话" Keyboard="Numeric" HorizontalTextAlignment="Center" />
+                        <EntryCell Label="面积(平米）" Keyboard="Numeric" HorizontalTextAlignment="Center"/>
+                        <EntryCell Label="跟踪情况" HorizontalTextAlignment="Center"/>
+                    </TableSection>
+                </TableView.Root>
+            </TableView>
+            <Button Text="保存"></Button>
+        </StackLayout>-->
+        <StackLayout>
+            <Grid ColumnSpacing="0" RowSpacing="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="0" BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="新建日期" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center"></Label>
+                    <DatePicker Grid.Column="1" HorizontalOptions="Center" x:Name="addDate"></DatePicker>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="1" BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="客户姓名" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center"></Label>
+                    <Entry x:Name="addName"  Grid.Column="1" VerticalOptions="Center" HorizontalTextAlignment="Center"></Entry>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="2" BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="联系电话" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center"></Label>
+                    <Entry x:Name="addPhone" Grid.Column="1" VerticalOptions="Center" HorizontalTextAlignment="Center" Keyboard="Numeric"></Entry>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="3" BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="建筑面积" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center"></Label>
+                    <Entry x:Name="addArea" Grid.Column="1" VerticalOptions="Center" HorizontalTextAlignment="Center" Keyboard="Numeric"></Entry>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="4" BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="跟踪情况" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center"></Label>
+                    <Entry x:Name="addSituation" Grid.Column="1" VerticalOptions="Center" HorizontalTextAlignment="Center" Keyboard="Numeric"></Entry>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="5" BackgroundColor="White">
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="6" BackgroundColor="White">
+                    <Button Text="保存" Clicked="OnSave" WidthRequest="200" HorizontalOptions="Center" VerticalOptions="Center"></Button>
+                </Grid>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

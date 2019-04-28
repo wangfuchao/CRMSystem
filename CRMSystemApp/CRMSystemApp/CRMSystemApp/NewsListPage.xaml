@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRMSystemApp.NewsListPage"
+             xmlns:local="clr-namespace:CRMSystemApp"
+             xmlns:controls="clr-namespace:CRMSystemApp">
+    <ListView x:Name="listView"  HasUnevenRows="True" IsPullToRefreshEnabled="True" IsGroupingEnabled="True" GroupDisplayBinding="{Binding Key}"  Refreshing="Handle_Refreshing" ItemTapped="Handle_ItemTapped" SeparatorColor="AliceBlue">
+        <ListView.GroupHeaderTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Label Text="{Binding Key}" FontSize="20"></Label>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.GroupHeaderTemplate>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <controls:NewsCell
+                    Theme="{Binding Theme}"
+                    Date="{Binding Date}"
+                    Head="{Binding Head}"
+                    Photo="{Binding Photo}"/>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

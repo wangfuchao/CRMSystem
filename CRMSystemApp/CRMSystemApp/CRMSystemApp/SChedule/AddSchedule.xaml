@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRMSystemApp.SChedule.AddSchedule"
+             Title="添加日程">
+    <ScrollView x:Name="ScheduleHolder">
+        <StackLayout>
+            <Grid ColumnSpacing="0" RowSpacing="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="0" BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="选择日期" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center"></Label>
+                    <DatePicker Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="100" x:Name="addDate"></DatePicker>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="1" BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="开始时间" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center"></Label>
+                    <TimePicker Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="100" x:Name="addTimeStart"></TimePicker>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="2" BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="结束时间" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center"></Label>
+                    <TimePicker Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="100" x:Name="addTimeEnd" PropertyChanged="OnCheckTimeEnd"></TimePicker>
+                    <Label Grid.Column="2" HorizontalOptions="Center" VerticalOptions="Center" x:Name="CheckTimeEnd" TextColor="Red"></Label>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="3" BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="颜色选择" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center"></Label>
+                    <Picker Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="100" x:Name="addColor" SelectedIndexChanged="OnSelectColor">
+                        <Picker.Items>
+                            <x:String>红色</x:String>
+                            <x:String>绿色</x:String>
+                            <x:String>黄色</x:String>
+                            <x:String>蓝色</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="4" BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="日程内容" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center"></Label>
+                    <Entry Grid.Column="1" HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="100" x:Name="addSubject" Keyboard="Text" Unfocused="TheSubjectUnfocus"></Entry>
+                    <Label x:Name="Result" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="2" TextColor="Red" ></Label>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="5" BackgroundColor="White">
+                    <Button Text="保    存"  WidthRequest="200" HorizontalOptions="Center" VerticalOptions="Center" Clicked="OnSave"></Button>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="6" BackgroundColor="White">
+                    <Button Text="日程查看"  WidthRequest="200" HorizontalOptions="Center" VerticalOptions="Center" Clicked="OnView"></Button>
+                </Grid>
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRMSystemApp.PersonalPage"
+             Title="本月业绩指标">
+    <ScrollView>
+        <Grid ColumnSpacing="0" RowSpacing="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Horizontal" Grid.Row="1">
+                <Grid ColumnSpacing="0" RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="20"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="定金签单数量：" HorizontalOptions="Center" Grid.Column="1" FontSize="15"></Label>
+                    <Label x:Name="OrderNumber" Text="0" HorizontalOptions="Center" Grid.Column="2" FontSize="18"></Label>
+                </Grid>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Grid.Row="2">
+                <Grid ColumnSpacing="0" RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="20"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="工程签单数量：" HorizontalOptions="Center" Grid.Column="1" FontSize="15"></Label>
+                    <Label x:Name="ProjectNumber" Text="0" HorizontalOptions="Center" Grid.Column="2" FontSize="18"></Label>
+                </Grid>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Grid.Row="3">
+                <Grid ColumnSpacing="0" RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="20"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="签定合同数量：" HorizontalOptions="Center" Grid.Column="1" FontSize="15"></Label>
+                    <Label x:Name="contractNumber" Text="0" HorizontalOptions="Center" Grid.Column="2" FontSize="18"></Label>
+                </Grid>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

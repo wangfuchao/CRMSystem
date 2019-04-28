@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRMSystemApp.BusinessHomePage">
+    <ScrollView x:Name="ContentHolder">
+        <Grid ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="2"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="2"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="2"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="2"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="2"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="2"/>
+
+            </Grid.RowDefinitions>
+            <BoxView BackgroundColor="White" Grid.Row="1"/>
+            <BoxView BackgroundColor="AliceBlue" Grid.Row="3"/>
+            <BoxView BackgroundColor="White" Grid.Row="5"/>
+            <BoxView BackgroundColor="AliceBlue" Grid.Row="7"/>
+            <BoxView BackgroundColor="White" Grid.Row="9"/>
+            <BoxView BackgroundColor="AliceBlue" Grid.Row="11"/>
+
+            <StackLayout Spacing="0" Grid.Row="0" Orientation="Vertical" VerticalOptions="End">
+                <Label Text="业务洽谈" FontSize="15" VerticalOptions="Center"></Label>
+            </StackLayout>
+            <StackLayout Spacing="0" Grid.Row="4"  Orientation="Vertical" VerticalOptions="End">
+                <Label Text="定金签单" FontSize="15" VerticalOptions="Center"></Label>
+            </StackLayout>
+            <StackLayout Spacing="0" Grid.Row="8"  Orientation="Vertical" VerticalOptions="End">
+                <Label Text="工程阶段" FontSize="15" VerticalOptions="Center"></Label>
+            </StackLayout>
+
+            <Grid ColumnSpacing="2" RowSpacing="0" Grid.Row="2" BackgroundColor="AliceBlue">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackLayout x:Name="StackLayout0"  BackgroundColor="White" Spacing="0" Grid.Column="0">
+                    <Image HeightRequest="50" Source="index.png" HorizontalOptions="Center"/>
+                    <Label Text="新建业务" FontSize="12" HorizontalOptions="Center"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Demo0_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout x:Name="StackLayout1"  BackgroundColor="White" Spacing="0" Grid.Column="1">
+                    <Image HeightRequest="50" Source="test2.png" HorizontalOptions="Center"/>
+                    <Label Text="业务查询" FontSize="12" HorizontalOptions="Center"/>
+                    <StackLayout.GestureRecognizers>
+                        <!--<TapGestureRecognizer Tapped="Demo1_Tapped"/>-->
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout x:Name="StackLayout2"  BackgroundColor="White" Spacing="0" Grid.Column="2">
+                    <Image HeightRequest="50" Source="test3.png" HorizontalOptions="Center"/>
+                    <Label Text="业务移交" FontSize="12" HorizontalOptions="Center"/>
+                    <StackLayout.GestureRecognizers>
+                        <!--<TapGestureRecognizer Tapped="Demo2_Tapped"/>-->
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout x:Name="StackLayout3"  BackgroundColor="White" Spacing="0" Grid.Column="3">
+                    <Image HeightRequest="50" Source="test4.png" HorizontalOptions="Center"/>
+                    <Label Text="业务接收" FontSize="12" HorizontalOptions="Center"/>
+                    <StackLayout.GestureRecognizers>
+                        <!--<TapGestureRecognizer Tapped="Demo3_Tapped"/>-->
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </Grid>
+            <Grid ColumnSpacing="2" RowSpacing="0" Grid.Row="6" BackgroundColor="AliceBlue">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackLayout x:Name="StackLayout00"  BackgroundColor="White" Spacing="0" Grid.Column="0">
+                    <Image HeightRequest="50" Source="fc1.png" HorizontalOptions="Center"/>
+                    <Label Text="新建签单" FontSize="12" HorizontalOptions="Center"/>
+                    <StackLayout.GestureRecognizers>
+                        <!--<TapGestureRecognizer Tapped="Demo00_Tapped"/>-->
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout x:Name="StackLayout11"  BackgroundColor="White" Spacing="0" Grid.Column="1">
+                    <Image HeightRequest="50" Source="fc2.png" HorizontalOptions="Center"/>
+                    <Label Text="签单查询" FontSize="12" HorizontalOptions="Center"/>
+                    <StackLayout.GestureRecognizers>
+                        <!--<TapGestureRecognizer Tapped="Demo11_Tapped"/>-->
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout x:Name="StackLayout22"  BackgroundColor="White" Spacing="0" Grid.Column="2">
+                    <Image HeightRequest="50" Source="fc3.png" HorizontalOptions="Center"/>
+                    <Label Text="签单修改" FontSize="12" HorizontalOptions="Center"/>
+                    <StackLayout.GestureRecognizers>
+                        <!--<TapGestureRecognizer Tapped="Demo22_Tapped"/>-->
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout x:Name="StackLayout33"  BackgroundColor="White" Spacing="0" Grid.Column="3">
+                    <!--<Image HeightRequest="50" Source="wfc4.png" HorizontalOptions="Center"/>
+                    <Label Text="fc4" FontSize="20" HorizontalOptions="Center"/>
+                    <StackLayout.GestureRecognizers>
+                        -->
+                    <!--<TapGestureRecognizer Tapped="Demo3_Tapped"/>-->
+                    <!--
+                    </StackLayout.GestureRecognizers>-->
+                </StackLayout>
+            </Grid>
+            <Grid ColumnSpacing="2" RowSpacing="0" Grid.Row="10" BackgroundColor="AliceBlue">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <StackLayout x:Name="StackLayout000"  BackgroundColor="White" Spacing="0" Grid.Column="0">
+                    <Image HeightRequest="50" Source="wfc1.png" HorizontalOptions="Center"/>
+                    <Label Text="新建工程" FontSize="12" HorizontalOptions="Center"/>
+                    <StackLayout.GestureRecognizers>
+                        <!--<TapGestureRecognizer Tapped="Demo000_Tapped"/>-->
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout x:Name="StackLayout111"  BackgroundColor="White" Spacing="0" Grid.Column="1">
+                    <Image HeightRequest="50" Source="wfc2.png" HorizontalOptions="Center"/>
+                    <Label Text="工程查询" FontSize="12" HorizontalOptions="Center"/>
+                    <StackLayout.GestureRecognizers>
+                        <!--<TapGestureRecognizer Tapped="Demo111_Tapped"/>-->
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout x:Name="StackLayout222"  BackgroundColor="White" Spacing="0" Grid.Column="2">
+                    <Image HeightRequest="50" Source="wfc3.png" HorizontalOptions="Center"/>
+                    <Label Text="工程修改" FontSize="12" HorizontalOptions="Center"/>
+                    <StackLayout.GestureRecognizers>
+                        <!--<TapGestureRecognizer Tapped="Demo222_Tapped"/>-->
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout x:Name="StackLayout333"  BackgroundColor="White" Spacing="0" Grid.Column="3">
+                    <!--<Image HeightRequest="50" Source="wfc4.png" HorizontalOptions="Center"/>
+                    <Label Text="fc4" FontSize="20" HorizontalOptions="Center"/>
+                    <StackLayout.GestureRecognizers>
+                        -->
+                    <!--<TapGestureRecognizer Tapped="Demo3_Tapped"/>-->
+                    <!--
+                    </StackLayout.GestureRecognizers>-->
+                </StackLayout>
+            </Grid>
+        </Grid>
+    </ScrollView>
+</ContentPage>

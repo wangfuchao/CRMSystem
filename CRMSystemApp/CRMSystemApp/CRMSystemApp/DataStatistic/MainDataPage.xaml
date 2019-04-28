@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRMSystemApp.DataStatistic.MainDataPage">
+    <ScrollView x:Name="ContentHolder">
+        <Grid ColumnSpacing="0" RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="80"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="1"/>
+            </Grid.RowDefinitions>
+
+            <BoxView BackgroundColor="AliceBlue" Grid.Row="1"/>
+            <BoxView BackgroundColor="AliceBlue" Grid.Row="3"/>
+            <BoxView BackgroundColor="AliceBlue" Grid.Row="6"/>
+            <BoxView BackgroundColor="AliceBlue" Grid.Row="8"/>
+            <BoxView BackgroundColor="AliceBlue" Grid.Row="10"/>
+            <BoxView BackgroundColor="AliceBlue" Grid.Row="12"/>
+            <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="2" BackgroundColor="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="选择月份" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center"></Label>
+                <Picker x:Name="addMonth"  Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="100" SelectedIndexChanged="PickMonth">
+                    <Picker.Items>
+                        <x:String>一月</x:String>
+                        <x:String>二月</x:String>
+                        <x:String>三月</x:String>
+                        <x:String>四月</x:String>
+                        <x:String>五月</x:String>
+                        <x:String>六月</x:String>
+                        <x:String>七月</x:String>
+                        <x:String>八月</x:String>
+                        <x:String>九月</x:String>
+                        <x:String>十月</x:String>
+                        <x:String>十一月</x:String>
+                        <x:String>十二月</x:String>
+                    </Picker.Items>
+                </Picker>
+            </Grid>
+            <Grid RowSpacing="0" ColumnSpacing="0" Grid.Row="4" BackgroundColor="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="40"/>
+                </Grid.ColumnDefinitions>
+                <Grid RowSpacing="0" ColumnSpacing="0" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="theClue.png" Grid.Column="0"></Image>
+                    <StackLayout Grid.Column="1" Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center">
+                        <Label Text="线索总数"></Label>
+                        <Label Text="0" FontSize="18" x:Name="ClueNumber"></Label>
+                    </StackLayout>
+                </Grid>
+                <Grid RowSpacing="0" ColumnSpacing="0" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="theOrder.png" Grid.Column="0"></Image>
+                    <StackLayout Grid.Column="1" Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center">
+                        <Label Text="新建定单"></Label>
+                        <Label Text="0" FontSize="18" x:Name="BookNumber"></Label>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+            <Grid RowSpacing="0" ColumnSpacing="0" Grid.Row="5" BackgroundColor="White">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="40"/>
+                </Grid.ColumnDefinitions>
+                <Grid RowSpacing="0" ColumnSpacing="0" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="theProject.png" Grid.Column="0"></Image>
+                    <StackLayout Grid.Column="1" Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center">
+                        <Label Text="新建工单"></Label>
+                        <Label Text="0" FontSize="18" x:Name="ProjectNumber"></Label>
+                    </StackLayout>
+                </Grid>
+                <Grid RowSpacing="0" ColumnSpacing="0" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="theContract.png" Grid.Column="0"></Image>
+                    <StackLayout Grid.Column="1" Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center">
+                        <Label Text="新建合同"></Label>
+                        <Label Text="0" FontSize="18" x:Name="ContractNumber"></Label>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+            <StackLayout x:Name="StackLayout0" BackgroundColor="White" Spacing="0" Grid.Row="9" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <Grid ColumnSpacing="0" RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="跟踪丢失" Grid.Column="0" FontSize="18" VerticalOptions="Center" HorizontalOptions="End"></Label>
+                    <Image Source="more.png" HeightRequest="30" WidthRequest="30" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="2"></Image>
+                </Grid>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ClueInfo_Tapped"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+            <StackLayout x:Name="StackLayout1" BackgroundColor="White" Spacing="0" Grid.Row="11" Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <Grid ColumnSpacing="0" RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="200"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="业务目标" Grid.Column="0" FontSize="18" VerticalOptions="Center" HorizontalOptions="End"></Label>
+                    <Image Source="more.png" HeightRequest="30" WidthRequest="30" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="2"></Image>
+                </Grid>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="ContractInfo_Tapped"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+        </Grid>
+    </ScrollView>
+</ContentPage>

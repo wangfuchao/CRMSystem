@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRMSystemApp.Business.DetailInfoPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid ColumnSpacing="0" RowSpacing="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <!--<RowDefinition Height="*"/>-->
+                </Grid.RowDefinitions>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="0" BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="新建日期" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center"></Label>
+                    <DatePicker Grid.Column="2" HorizontalOptions="Start" VerticalOptions="Center" x:Name="showDate" TextColor="DarkSlateBlue" DateSelected="OnDateSelect" WidthRequest="100"></DatePicker>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="1" BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="80"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="客户姓名" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center"></Label>
+                    <Entry x:Name="showName"  Grid.Column="2" VerticalOptions="Center" HorizontalTextAlignment="Start" FontSize="18" TextColor="DarkSlateBlue" Unfocused="NameUnfocus"></Entry>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="2" BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="80"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="联系电话" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center"></Label>
+                    <Label x:Name="showPhone" Grid.Column="2" VerticalOptions="Center" HorizontalTextAlignment="Start" FontSize="18" TextColor="DarkSlateBlue" ></Label>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="3" BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="80"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="所属小区" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center"></Label>
+                    <Entry x:Name="showPlot" Grid.Column="2" VerticalOptions="Center" HorizontalTextAlignment="Start" FontSize="18" TextColor="DarkSlateBlue"   Unfocused="PlotUnfocus"></Entry>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="4" BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="80"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="房屋类型" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center"></Label>
+                    <!--<Entry Grid.Column="2" x:Name="showHouseType" HorizontalTextAlignment="Start" VerticalOptions="Center" FontSize="18" TextColor="DarkSlateBlue" Unfocused="HouseTypeUnfocus">
+                    </Entry>-->
+                    <Picker WidthRequest="100" x:Name="showHouseType" Grid.Column="2" HorizontalOptions="Start"  SelectedIndexChanged="HouseTypeUnfocus">
+                        <Picker.Items>
+                            <x:String>新房装修</x:String>
+                            <x:String>老房改造</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="5" BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="80"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="客户类型" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center"></Label>
+                    <!--<Entry Grid.Column="2" x:Name="showClientType" HorizontalTextAlignment="Start" VerticalOptions="Center" FontSize="18" TextColor="DarkSlateBlue" Unfocused="HouseTypeUnfocus">
+                    </Entry>-->
+                    <Picker WidthRequest="100" x:Name="showClientType" Grid.Column="2" HorizontalOptions="Start" SelectedIndexChanged="ClientTypeSelected">
+                        <Picker.Items>
+                            <x:String>合作伙伴</x:String>
+                            <x:String>三方提供</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="6" BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="80"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="优先级别" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center" ></Label>
+                    <Label Grid.Column="2" x:Name="showPriority" HorizontalTextAlignment="Start" VerticalOptions="Center" FontSize="18" TextColor="DarkSlateBlue" >
+                    </Label>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="7" BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="30"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="80"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="跟踪状态" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center" ></Label>
+                    <Label Grid.Column="2" x:Name="showState" HorizontalTextAlignment="Start" VerticalOptions="Center" FontSize="18" TextColor="DarkSlateBlue">
+                    </Label>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="8" BackgroundColor="White">
+                    <Button Text="保 存"  WidthRequest="200" HorizontalOptions="Center" VerticalOptions="Center" Clicked="OnSave" x:Name="btSave" IsEnabled="False"></Button>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="9" BackgroundColor="White">
+                    <Button Text="删 除"  WidthRequest="200" HorizontalOptions="Center" VerticalOptions="Center" Clicked="OnDelete" x:Name="btDelete" IsEnabled="False"></Button>
+                </Grid>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

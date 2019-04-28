@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRMSystemApp.SettingPage"
+             Title="个人设置">
+    <Grid RowSpacing="0" ColumnSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="1"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Text="    个人信息" TextColor="Red" VerticalOptions="Center"/>
+        <BoxView Grid.Row="1" BackgroundColor="LightGray"/>
+        <StackLayout Orientation="Horizontal"  Grid.Row="2">
+            <Label Text="    姓名" TextColor="Red" VerticalOptions="Center"/>
+            <Label  FontSize="18" VerticalOptions="Center" x:Name="theName"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"  Grid.Row="3">
+            <Label Text="    工号" TextColor="Red" VerticalOptions="Center"/>
+            <Label  FontSize="18" VerticalOptions="Center" x:Name="theId"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal"  Grid.Row="4">
+            <Label Text="    地区" TextColor="Red" VerticalOptions="Center"/>
+            <Label  FontSize="18" VerticalOptions="Center" x:Name="theArea"/>
+        </StackLayout>
+        <StackLayout Orientation="Horizontal" Grid.Row="5">
+            <Label Text="    电话" TextColor="Red" VerticalOptions="Center"/>
+            <Label  FontSize="18" VerticalOptions="Center" x:Name="thePhone"/>
+        </StackLayout>
+        <TableView Grid.Row="6" Intent="Form">
+            <TableSection>
+                <SwitchCell Text="修改密码" x:Name="resetPassword" On="False" OnChanged="theReset"></SwitchCell>
+            </TableSection>
+        </TableView>
+        <StackLayout Grid.Row="7" Orientation="Vertical" HorizontalOptions="Center" IsVisible="False" x:Name="St0">
+            <Entry Placeholder="输入新密码" WidthRequest="200" x:Name="thePassword" IsPassword="True" Unfocused="UnfocusPassword" Keyboard="Numeric"/>
+            <Entry Placeholder="确认新密码" WidthRequest="200" x:Name="theCPassword" IsPassword="True"  Keyboard="Numeric"/>
+        </StackLayout>
+        <StackLayout Grid.Row="8" HorizontalOptions="Center" IsVisible="False" x:Name="St1">
+            <Button Text="确认修改" WidthRequest="100" x:Name="theConfirm" Clicked="OnUpdate"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

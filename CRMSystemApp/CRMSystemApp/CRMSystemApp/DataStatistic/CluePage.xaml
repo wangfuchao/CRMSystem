@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             xmlns:local="clr-namespace:CRMSystemApp.DataStatistic"
+             x:Class="CRMSystemApp.DataStatistic.CluePage">
+    <chart:SfChart x:Name="Chart" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+        <chart:SfChart.BindingContext>
+            <local:ViewModelClue/>
+        </chart:SfChart.BindingContext>
+
+        <chart:SfChart.Title>
+            <chart:ChartTitle Text="跟踪丢失图"/>
+        </chart:SfChart.Title>
+
+        <chart:SfChart.Legend>
+            <chart:ChartLegend/>
+        </chart:SfChart.Legend>
+
+        <chart:SfChart.PrimaryAxis>
+            <chart:CategoryAxis>
+                <chart:CategoryAxis.Title>
+                    <chart:ChartAxisTitle Text="Name"></chart:ChartAxisTitle>
+                </chart:CategoryAxis.Title>
+            </chart:CategoryAxis>
+        </chart:SfChart.PrimaryAxis>
+
+        <chart:SfChart.SecondaryAxis>
+            <chart:NumericalAxis>
+                <chart:NumericalAxis.Title>
+                    <chart:ChartAxisTitle Text="Height (in cm)"></chart:ChartAxisTitle>
+                </chart:NumericalAxis.Title>
+            </chart:NumericalAxis>
+        </chart:SfChart.SecondaryAxis>
+
+        <chart:SfChart.Series>
+            <chart:DoughnutSeries  CircularCoefficient="0.8" ExplodeIndex="1" ItemsSource="{Binding Data}" XBindingPath="StateName" YBindingPath="StateNumber">
+                <chart:DoughnutSeries.DataMarker>
+                    <chart:ChartDataMarker/>
+                </chart:DoughnutSeries.DataMarker>
+            </chart:DoughnutSeries>
+        </chart:SfChart.Series>
+
+    </chart:SfChart>
+</ContentPage>

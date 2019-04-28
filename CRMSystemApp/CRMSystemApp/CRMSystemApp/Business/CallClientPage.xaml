@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRMSystemApp.Business.CallClientPage">
+    <ContentPage.Content>
+        <Grid RowSpacing="0" ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"></RowDefinition>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="45"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="220"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="180"/>
+            </Grid.RowDefinitions>
+            <Button Grid.Row="1" Text="联系客户" Clicked="OnCall"></Button>
+            <Label Grid.Row="2" Text="    联系备忘"/>
+            <StackLayout Grid.Row="3" Orientation="Horizontal" HorizontalOptions="Center">
+                <Entry WidthRequest="200" HorizontalTextAlignment="Center" x:Name="TheLog" Text=""/>
+                <Button Text="+" WidthRequest="40" Clicked="OnAddLog"/>
+            </StackLayout>
+            <BoxView Grid.Row="4" BackgroundColor="AliceBlue"/>
+            <BoxView Grid.Row="6" BackgroundColor="AliceBlue"/>
+            <ScrollView Grid.Row="5" HeightRequest="60" x:Name="LogHolder">
+            </ScrollView>
+            <StackLayout Grid.Row="7">
+                <Grid RowSpacing="0" ColumnSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <TableView Grid.Row="0" Intent="Form">
+                        <TableSection>
+                            <SwitchCell Text="修  改" x:Name="reset" OnChanged="OnReset" On="False"></SwitchCell>
+                        </TableSection>
+                    </TableView>
+                    <StackLayout x:Name="StackLayout0" Grid.Row="1" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" IsEnabled="False" IsVisible="False">
+                        <Label Text="线索状态" VerticalOptions="Center"></Label>
+                        <Picker WidthRequest="100" x:Name="state" IsEnabled="False">
+                            <Picker.Items>
+                                <x:String>客户丢失</x:String>
+                                <x:String>正在跟踪</x:String>
+                                <x:String>稳步推进</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </StackLayout>
+                    <StackLayout Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Center">
+                        <Label WidthRequest="10"/>
+                        <Button  x:Name="save" Text="保 存" IsEnabled="False" Clicked="OnSave" IsVisible="False" WidthRequest="120" HeightRequest="20"></Button>
+                        <Label WidthRequest="10"/>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

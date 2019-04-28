@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRMSystemApp.Business.InfoClass.PriorityListPage"
+             xmlns:local="clr-namespace:CRMSystemApp.Business.InfoClass"
+             xmlns:controls="clr-namespace:CRMSystemApp.Business"
+             Title="优先级">
+    <ListView x:Name="listView"  HasUnevenRows="True" IsPullToRefreshEnabled="True" IsGroupingEnabled="True" GroupDisplayBinding="{Binding Key}"  Refreshing="Handle_Refreshing" ItemTapped="Handle_ItemTapped" SeparatorColor="AliceBlue">
+        <ListView.GroupHeaderTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Label Text="{Binding Key}" FontSize="20"></Label>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.GroupHeaderTemplate>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <controls:ClientsCell
+                    Name="{Binding Name}"
+                    Phone="{Binding Phone}"
+                    Priority="{Binding Priority}"
+                    Photo="{Binding Photo}"/>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

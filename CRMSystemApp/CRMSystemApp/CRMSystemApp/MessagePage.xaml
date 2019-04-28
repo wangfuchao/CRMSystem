@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRMSystemApp.MessagePage"
+             Title="消息通知">
+    <Grid ColumnSpacing="0" RowSpacing="1">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="80"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="120"/>
+        </Grid.RowDefinitions>
+        <StackLayout Grid.Row="1" Orientation="Horizontal">
+            <Label Text="      发布：" TextColor="Red" ></Label>
+            <Label x:Name="newsPost" FontSize="18"></Label>
+        </StackLayout>
+        <StackLayout  Grid.Row="2" Orientation="Horizontal">
+            <Label Text="      时间：" TextColor="Red" ></Label>
+            <Label x:Name="newsTime" FontSize="18"></Label>
+        </StackLayout>
+        <StackLayout Grid.Row="3" Orientation="Horizontal">
+            <Label Text="      主题：" TextColor="Red"></Label>
+            <Label x:Name="newsTheme" FontSize="18"></Label>
+        </StackLayout>
+        <StackLayout Grid.Row="4" Orientation="Horizontal">
+            <Label Text="      标题：" TextColor="Red"></Label>
+            <Label x:Name="newsHead" FontSize="18"></Label>
+        </StackLayout>
+        <StackLayout Grid.Row="5" Orientation="Horizontal">
+            <Label Text="      内容：" TextColor="Red"></Label>
+            <Label x:Name="newsContent" FontSize="18"></Label>
+        </StackLayout>
+    </Grid>
+</ContentPage>

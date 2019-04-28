@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRMSystemApp.Login">
+    <StackLayout>
+        <Grid ColumnSpacing="0" RowSpacing="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <Image Source="Login.png" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="1" HeightRequest="60" WidthRequest="60"></Image>
+            <StackLayout Grid.Row="2">
+                <Grid ColumnSpacing="0" RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="250"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Entry x:Name="UserIds" Placeholder="工 号" Keyboard="Numeric" Grid.Column="1" />
+                </Grid>
+            </StackLayout>
+            <StackLayout Grid.Row="3">
+                <Grid ColumnSpacing="0" RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="250"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Entry x:Name="Passwords" Placeholder="密 码" IsPassword="True" Keyboard="Numeric" Grid.Column="1"/>
+                </Grid>
+            </StackLayout>
+            <StackLayout Grid.Row="4">
+                <Grid ColumnSpacing="0" RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="250"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="ButtonLogin" Text="登 录" Clicked="OnLogin" Grid.Column="1"/>
+                </Grid>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>

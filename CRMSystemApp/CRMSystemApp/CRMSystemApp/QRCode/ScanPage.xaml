@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRMSystemApp.QRCode.ScanPage"
+             Title="接收客户线索">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="扫码接收客户线索"/>
+            <Button x:Name="ScanTest" Text="扫描" Clicked="OnScan"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

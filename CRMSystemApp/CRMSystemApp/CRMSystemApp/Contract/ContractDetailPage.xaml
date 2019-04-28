@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRMSystemApp.Contract.ContractDetailPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid ColumnSpacing="0" RowSpacing="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <!--<RowDefinition Height="*"/>-->
+                </Grid.RowDefinitions>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="0" BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="选择日期" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center"></Label>
+                    <DatePicker Grid.Column="1" HorizontalOptions="Center" x:Name="addDate" WidthRequest="100" DateSelected="OnDateSelect" ></DatePicker>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="1" BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="15"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="客户姓名" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center"></Label>
+                    <Label x:Name="addName"  Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center" FontSize="15" WidthRequest="50"></Label>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="2" BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="15"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="联系电话" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center"></Label>
+                    <Label x:Name="addPhone" Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center" FontSize="15"></Label>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="3" BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="15"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="施工地点" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center"></Label>
+                    <Entry x:Name="addAddress" Grid.Column="2" VerticalOptions="Center" HorizontalTextAlignment="Center" Keyboard="Text" Unfocused="AddressUnfocus"></Entry>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="4" BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="15"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="房屋户型" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center"></Label>
+                    <Entry x:Name="addHouseType" Grid.Column="2" VerticalOptions="Center" HorizontalTextAlignment="Center" Keyboard="Text" Unfocused="HouseUnfocus"></Entry>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="5" BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="15"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="建筑面积" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center"></Label>
+                    <Entry x:Name="addArea" Grid.Column="2" VerticalOptions="Center" HorizontalTextAlignment="Center" Keyboard="Numeric" Unfocused="AreaUnfocus"></Entry>
+                    <Label Text="平米" Grid.Column="3" WidthRequest="15" HeightRequest="15" VerticalOptions="Center"></Label>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="6" BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="15"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="装修预算" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center"></Label>
+                    <Entry x:Name="addBudget" Grid.Column="2" VerticalOptions="Center" HorizontalTextAlignment="Center" Keyboard="Numeric" Unfocused="BudgetUnfocus"></Entry>
+                    <Label Text="元" Grid.Column="3" HorizontalOptions="Start" VerticalOptions="Center"></Label>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="7" BackgroundColor="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"/>
+                        <ColumnDefinition Width="10"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="15"/>
+                        <ColumnDefinition Width="100"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="预付定金" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center"></Label>
+                    <Entry x:Name="addPayment" Grid.Column="2" VerticalOptions="Center" HorizontalTextAlignment="Center" Keyboard="Numeric" Unfocused="PaymentUnfocus"></Entry>
+                    <Label Text="元" Grid.Column="3" HorizontalOptions="Start" VerticalOptions="Center"></Label>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="8" BackgroundColor="White">
+                    <Button Text="保  存"  WidthRequest="200" HorizontalOptions="Center" VerticalOptions="Center" Clicked="OnSaveContract"  x:Name="btSave" ></Button>
+                </Grid>
+                <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="9" BackgroundColor="White">
+                    <Button Text="删  除"  WidthRequest="200" HorizontalOptions="Center" VerticalOptions="Center" Clicked="OnDeleteContract"  x:Name="btDelete" ></Button>
+                </Grid>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

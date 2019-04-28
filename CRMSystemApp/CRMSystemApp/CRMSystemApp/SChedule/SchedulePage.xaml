@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CRMSystemApp.SChedule.SchedulePage"
+             xmlns:local="clr-namespace:CRMSystemApp.SChedule"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfSchedule.XForms;assembly=Syncfusion.SfSchedule.XForms"
+             Title="日程查看">
+    <ContentPage.Content>
+        <ScrollView x:Name="mySchedule">
+            <syncfusion:SfSchedule x:Name="schedule" ScheduleView="MonthView" Locale="cn"  ShowAppointmentsInline="True" DataSource="{Binding AppointmentCollection}" CellLongPressedCommand="{Binding ScheduleCellLongPressed}" CellDoubleTapped="OnDoubleTapped">
+                <syncfusion:SfSchedule.MonthViewSettings  >
+                </syncfusion:SfSchedule.MonthViewSettings>
+                <syncfusion:SfSchedule.BindingContext>
+                    <local:ViewModel/>
+                </syncfusion:SfSchedule.BindingContext>
+            </syncfusion:SfSchedule>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
